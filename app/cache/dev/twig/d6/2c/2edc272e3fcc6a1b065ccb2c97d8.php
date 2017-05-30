@@ -35,7 +35,7 @@ class __TwigTemplate_d62c2edc272e3fcc6a1b065ccb2c97d8 extends Twig_Template
     <body  BGCOLOR=\"#FEF9E7\">
         <nav>
     <div class=\"nav-wrapper #1a237e indigo darken-4\">
-      <a href=\"#\" class=\"brand-logo\">IECA</a>
+      <a href=\"#\" class=\"brand-logo\">Cursos</a>
       <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">
         <li><a href=\"sass.html\">Inicio</a></li>
         <li><a href=\"badges.html\">Cursos</a></li>
