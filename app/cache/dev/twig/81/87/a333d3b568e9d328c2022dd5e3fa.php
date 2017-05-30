@@ -30,7 +30,7 @@ class __TwigTemplate_8187a333d3b568e9d328c2022dd5e3fa extends Twig_Template
     <body  BGCOLOR=\"#FEF9E7\">
        <nav>
     <div class=\"nav-wrapper #1a237e indigo darken-4\">
-      <a href=\"#\" class=\"brand-logo\">Control </a>
+      <a href=\"#\" class=\"brand-logo\">Coapacitaciones </a>
       <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">
         <li><a href=\"sass.html\">Inicio</a></li>
         <li><a href=\"badges.html\">Cursos</a></li>
