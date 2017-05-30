@@ -2,4 +2,8 @@ _assetic:
     resource: .
     type: assetic
 _app:
+<<<<<<< HEAD
     resource: 'C:/Users/fernanda/Documents/GitHub/pagina/app/config/routing_dev.yml'
+=======
+    resource: 'C:/Users/paola rico/Documents/GitHub/pagina/app/config/routing_dev.yml'
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db

@@ -264,7 +264,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAnnotationReaderService()
     {
+<<<<<<< HEAD
         return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/annotations', true);
+=======
+        return $this->services['annotation_reader'] = new \Doctrine\Common\Annotations\FileCacheReader(new \Doctrine\Common\Annotations\AnnotationReader(), 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/annotations', true);
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -277,9 +281,15 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_AssetManagerService()
     {
+<<<<<<< HEAD
         $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/assetic/config'), true)));
 
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($this->get('templating.loader'), '', 'C:/Users/fernanda/Documents/GitHub/pagina/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
+=======
+        $this->services['assetic.asset_manager'] = $instance = new \Assetic\Factory\LazyAssetManager($this->get('assetic.asset_factory'), array('twig' => new \Assetic\Factory\Loader\CachedFormulaLoader(new \Assetic\Extension\Twig\TwigFormulaLoader($this->get('twig')), new \Assetic\Cache\ConfigCache('C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/assetic/config'), true)));
+
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($this->get('templating.loader'), '', 'C:/Users/paola rico/Documents/GitHub/pagina/app/Resources/views', '/\\.[^.]+\\.twig$/'), 'twig');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
 
         return $instance;
     }
@@ -365,7 +375,11 @@ class appDevDebugProjectContainer extends Container
         $a = $this->get('kernel');
         $b = $this->get('templating.filename_parser');
 
+<<<<<<< HEAD
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/Users/fernanda/Documents/GitHub/pagina/app/Resources');
+=======
+        $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, 'C:/Users/paola rico/Documents/GitHub/pagina/app/Resources');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
 
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, $this->get('templating.locator')), 1 => new \Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer($this), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer($this->get('router')), 3 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer($this, $c), 4 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer($this->get('doctrine'))));
     }
@@ -539,6 +553,7 @@ class appDevDebugProjectContainer extends Container
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
         $a = new \Doctrine\Common\Cache\ArrayCache();
+<<<<<<< HEAD
         $a->setNamespace('sf2orm_default_b2e219b409585f6a2f8dbf04cbceaf42');
 
         $b = new \Doctrine\Common\Cache\ArrayCache();
@@ -548,6 +563,17 @@ class appDevDebugProjectContainer extends Container
         $c->setNamespace('sf2orm_default_b2e219b409585f6a2f8dbf04cbceaf42');
 
         $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\src\\principal\\miBundle\\Resources\\config\\doctrine' => 'principal\\miBundle\\Entity'));
+=======
+        $a->setNamespace('sf2orm_default_6d6bbaacdcdd1376ee059e9fa27864ef');
+
+        $b = new \Doctrine\Common\Cache\ArrayCache();
+        $b->setNamespace('sf2orm_default_6d6bbaacdcdd1376ee059e9fa27864ef');
+
+        $c = new \Doctrine\Common\Cache\ArrayCache();
+        $c->setNamespace('sf2orm_default_6d6bbaacdcdd1376ee059e9fa27864ef');
+
+        $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\src\\principal\\miBundle\\Resources\\config\\doctrine' => 'principal\\miBundle\\Entity'));
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
         $d->setGlobalBasename('mapping');
 
         $e = new \Doctrine\ORM\Mapping\Driver\DriverChain();
@@ -559,7 +585,11 @@ class appDevDebugProjectContainer extends Container
         $f->setQueryCacheImpl($b);
         $f->setResultCacheImpl($c);
         $f->setMetadataDriverImpl($e);
+<<<<<<< HEAD
         $f->setProxyDir('C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/doctrine/orm/Proxies');
+=======
+        $f->setProxyDir('C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/doctrine/orm/Proxies');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
         $f->setProxyNamespace('Proxies');
         $f->setAutoGenerateProxyClasses(true);
         $f->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
@@ -662,7 +692,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getFileLocatorService()
     {
+<<<<<<< HEAD
         return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/Users/fernanda/Documents/GitHub/pagina/app/Resources');
+=======
+        return $this->services['file_locator'] = new \Symfony\Component\HttpKernel\Config\FileLocator($this->get('kernel'), 'C:/Users/paola rico/Documents/GitHub/pagina/app/Resources');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -1415,7 +1449,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getMonolog_Handler_MainService()
     {
+<<<<<<< HEAD
         return $this->services['monolog.handler.main'] = new \Monolog\Handler\StreamHandler('C:/Users/fernanda/Documents/GitHub/pagina/app/logs/dev.log', 100, true);
+=======
+        return $this->services['monolog.handler.main'] = new \Monolog\Handler\StreamHandler('C:/Users/paola rico/Documents/GitHub/pagina/app/logs/dev.log', 100, true);
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -1619,7 +1657,11 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector($this->get('doctrine'));
         $d->addLogger('default', $this->get('doctrine.dbal.logger.profiling.default'));
 
+<<<<<<< HEAD
         $this->services['profiler'] = $instance = new \Symfony\Component\HttpKernel\Profiler\Profiler(new \Symfony\Component\HttpKernel\Profiler\FileProfilerStorage('file:C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/profiler', '', '', 86400), $a);
+=======
+        $this->services['profiler'] = $instance = new \Symfony\Component\HttpKernel\Profiler\Profiler(new \Symfony\Component\HttpKernel\Profiler\FileProfilerStorage('file:C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/profiler', '', '', 86400), $a);
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
 
         $instance->add($c);
         $instance->add($this->get('data_collector.request'));
@@ -1703,7 +1745,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getRouterService()
     {
+<<<<<<< HEAD
         return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/assetic/routing.yml', array('cache_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev', 'debug' => true, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appDevUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appDevUrlMatcher', 'strict_requirements' => true), $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+=======
+        return $this->services['router'] = new \Symfony\Bundle\FrameworkBundle\Routing\Router($this, 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/assetic/routing.yml', array('cache_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev', 'debug' => true, 'generator_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator', 'generator_dumper_class' => 'Symfony\\Component\\Routing\\Generator\\Dumper\\PhpGeneratorDumper', 'generator_cache_class' => 'appDevUrlGenerator', 'matcher_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_base_class' => 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableUrlMatcher', 'matcher_dumper_class' => 'Symfony\\Component\\Routing\\Matcher\\Dumper\\PhpMatcherDumper', 'matcher_cache_class' => 'appDevUrlMatcher', 'strict_requirements' => true), $this->get('router.request_context', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -1871,7 +1917,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_SecureRandomService()
     {
+<<<<<<< HEAD
         return $this->services['security.secure_random'] = new \Symfony\Component\Security\Core\Util\SecureRandom('C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/secure_random.seed', $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+=======
+        return $this->services['security.secure_random'] = new \Symfony\Component\Security\Core\Util\SecureRandom('C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/secure_random.seed', $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -1897,7 +1947,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSensio_Distribution_WebconfiguratorService()
     {
+<<<<<<< HEAD
         return $this->services['sensio.distribution.webconfigurator'] = new \Sensio\Bundle\DistributionBundle\Configurator\Configurator('C:/Users/fernanda/Documents/GitHub/pagina/app');
+=======
+        return $this->services['sensio.distribution.webconfigurator'] = new \Sensio\Bundle\DistributionBundle\Configurator\Configurator('C:/Users/paola rico/Documents/GitHub/pagina/app');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -2045,7 +2099,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSession_HandlerService()
     {
+<<<<<<< HEAD
         return $this->services['session.handler'] = new \Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler('C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/sessions');
+=======
+        return $this->services['session.handler'] = new \Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler('C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/sessions');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -2058,7 +2116,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSession_Storage_FilesystemService()
     {
+<<<<<<< HEAD
         return $this->services['session.storage.filesystem'] = new \Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage('C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/sessions');
+=======
+        return $this->services['session.storage.filesystem'] = new \Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage('C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/sessions');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -2291,7 +2353,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_Helper_CodeService()
     {
+<<<<<<< HEAD
         return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/Users/fernanda/Documents/GitHub/pagina/app', 'UTF-8');
+=======
+        return $this->services['templating.helper.code'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper(NULL, 'C:/Users/paola rico/Documents/GitHub/pagina/app', 'UTF-8');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -2783,7 +2849,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTranslator_DefaultService()
     {
+<<<<<<< HEAD
         return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini')), array('cache_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/translations', 'debug' => true));
+=======
+        return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini')), array('cache_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/translations', 'debug' => true));
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -2796,14 +2866,22 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTwigService()
     {
+<<<<<<< HEAD
         $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => true, 'strict_variables' => true, 'exception_controller' => 'twig.controller.exception:showAction', 'autoescape_service' => NULL, 'autoescape_service_method' => NULL, 'cache' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/twig', 'charset' => 'UTF-8', 'paths' => array()));
+=======
+        $this->services['twig'] = $instance = new \Twig_Environment($this->get('twig.loader'), array('debug' => true, 'strict_variables' => true, 'exception_controller' => 'twig.controller.exception:showAction', 'autoescape_service' => NULL, 'autoescape_service_method' => NULL, 'cache' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/twig', 'charset' => 'UTF-8', 'paths' => array()));
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
 
         $instance->addExtension(new \Symfony\Bundle\SecurityBundle\Twig\Extension\LogoutUrlExtension($this->get('templating.helper.logout_url')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\SecurityExtension($this->get('security.context', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator')));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\AssetsExtension($this));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\ActionsExtension($this));
+<<<<<<< HEAD
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\CodeExtension(NULL, 'C:/Users/fernanda/Documents/GitHub/pagina/app', 'UTF-8'));
+=======
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\CodeExtension(NULL, 'C:/Users/paola rico/Documents/GitHub/pagina/app', 'UTF-8'));
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\RoutingExtension($this->get('router')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\YamlExtension());
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\HttpKernelExtension($this->get('fragment.handler')));
@@ -2855,6 +2933,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['twig.loader'] = $instance = new \Symfony\Bundle\TwigBundle\Loader\FilesystemLoader($this->get('templating.locator'), $this->get('templating.name_parser'));
 
+<<<<<<< HEAD
         $instance->addPath('C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', 'Framework');
         $instance->addPath('C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views', 'Security');
         $instance->addPath('C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', 'Twig');
@@ -2866,6 +2945,19 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
         $instance->addPath('C:/Users/fernanda/Documents/GitHub/pagina/app/Resources/views');
         $instance->addPath('C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
+=======
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle/Resources/views', 'Framework');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle/Resources/views', 'Security');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', 'Twig');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', 'Swiftmailer');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\src\\principal\\miBundle/Resources/views', 'mi');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
+        $instance->addPath('C:/Users/paola rico/Documents/GitHub/pagina/app/Resources/views');
+        $instance->addPath('C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
 
         return $instance;
     }
@@ -2991,7 +3083,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_AssetFactoryService()
     {
+<<<<<<< HEAD
         $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, $this->getParameterBag(), 'C:/Users/fernanda/Documents/GitHub/pagina/app/../web', true);
+=======
+        $this->services['assetic.asset_factory'] = $instance = new \Symfony\Bundle\AsseticBundle\Factory\AssetFactory($this->get('kernel'), $this, $this->getParameterBag(), 'C:/Users/paola rico/Documents/GitHub/pagina/app/../web', true);
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
 
         $instance->addWorker(new \Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker());
 
@@ -3012,7 +3108,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getAssetic_CacheService()
     {
+<<<<<<< HEAD
         return $this->services['assetic.cache'] = new \Assetic\Cache\FilesystemCache('C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/assetic/assets');
+=======
+        return $this->services['assetic.cache'] = new \Assetic\Cache\FilesystemCache('C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/assetic/assets');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -3191,7 +3291,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_LocatorService()
     {
+<<<<<<< HEAD
         return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev');
+=======
+        return $this->services['templating.locator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator($this->get('file_locator'), 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev');
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -3242,7 +3346,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
+<<<<<<< HEAD
         return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+=======
+        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => 'C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
     }
 
     /**
@@ -3296,12 +3404,21 @@ class appDevDebugProjectContainer extends Container
     protected function getDefaultParameters()
     {
         return array(
+<<<<<<< HEAD
             'kernel.root_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
             'kernel.name' => 'app',
             'kernel.cache_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev',
             'kernel.logs_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/logs',
+=======
+            'kernel.root_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app',
+            'kernel.environment' => 'dev',
+            'kernel.debug' => true,
+            'kernel.name' => 'app',
+            'kernel.cache_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev',
+            'kernel.logs_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/logs',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'kernel.bundles' => array(
                 'FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle',
                 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle',
@@ -3377,7 +3494,11 @@ class appDevDebugProjectContainer extends Container
             'debug.errors_logger_listener.class' => 'Symfony\\Component\\HttpKernel\\EventListener\\ErrorsLoggerListener',
             'debug.event_dispatcher.class' => 'Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher',
             'debug.stopwatch.class' => 'Symfony\\Component\\Stopwatch\\Stopwatch',
+<<<<<<< HEAD
             'debug.container.dump' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/appDevDebugProjectContainer.xml',
+=======
+            'debug.container.dump' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/appDevDebugProjectContainer.xml',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'debug.controller_resolver.class' => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver',
             'kernel.secret' => 'ThisTokenIsNotSoSecretChangeIt',
             'kernel.http_method_override' => true,
@@ -3396,7 +3517,11 @@ class appDevDebugProjectContainer extends Container
             'session.storage.options' => array(
 
             ),
+<<<<<<< HEAD
             'session.save_path' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/sessions',
+=======
+            'session.save_path' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/sessions',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'form.resolved_type_factory.class' => 'Symfony\\Component\\Form\\ResolvedFormTypeFactory',
             'form.registry.class' => 'Symfony\\Component\\Form\\FormRegistry',
             'form.factory.class' => 'Symfony\\Component\\Form\\FormFactory',
@@ -3452,7 +3577,11 @@ class appDevDebugProjectContainer extends Container
             'validator.mapping.loader.yaml_files_loader.class' => 'Symfony\\Component\\Validator\\Mapping\\Loader\\YamlFilesLoader',
             'validator.validator_factory.class' => 'Symfony\\Bundle\\FrameworkBundle\\Validator\\ConstraintValidatorFactory',
             'validator.mapping.loader.xml_files_loader.mapping_files' => array(
+<<<<<<< HEAD
                 0 => 'C:\\Users\\fernanda\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
+=======
+                0 => 'C:\\Users\\paola rico\\Documents\\GitHub\\pagina\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form/Resources/config/validation.xml',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
 
@@ -3471,7 +3600,11 @@ class appDevDebugProjectContainer extends Container
             'data_collector.router.class' => 'Symfony\\Bundle\\FrameworkBundle\\DataCollector\\RouterDataCollector',
             'profiler_listener.only_exceptions' => false,
             'profiler_listener.only_master_requests' => false,
+<<<<<<< HEAD
             'profiler.storage.dsn' => 'file:C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/profiler',
+=======
+            'profiler.storage.dsn' => 'file:C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/profiler',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'profiler.storage.username' => '',
             'profiler.storage.password' => '',
             'profiler.storage.lifetime' => 86400,
@@ -3495,7 +3628,11 @@ class appDevDebugProjectContainer extends Container
             'router.request_context.host' => 'localhost',
             'router.request_context.scheme' => 'http',
             'router.request_context.base_url' => '',
+<<<<<<< HEAD
             'router.resource' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/assetic/routing.yml',
+=======
+            'router.resource' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/assetic/routing.yml',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'router.cache_class_prefix' => 'appDev',
             'request_listener.http_port' => 80,
             'request_listener.https_port' => 443,
@@ -3607,7 +3744,11 @@ class appDevDebugProjectContainer extends Container
                 'exception_controller' => 'twig.controller.exception:showAction',
                 'autoescape_service' => NULL,
                 'autoescape_service_method' => NULL,
+<<<<<<< HEAD
                 'cache' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/twig',
+=======
+                'cache' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/twig',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
                 'charset' => 'UTF-8',
                 'paths' => array(
 
@@ -3661,7 +3802,11 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.plugin.blackhole.class' => 'Swift_Plugins_BlackholePlugin',
             'swiftmailer.spool.memory.class' => 'Swift_MemorySpool',
             'swiftmailer.email_sender.listener.class' => 'Symfony\\Bundle\\SwiftmailerBundle\\EventListener\\EmailSenderListener',
+<<<<<<< HEAD
             'swiftmailer.spool.memory.path' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/swiftmailer/spool',
+=======
+            'swiftmailer.spool.memory.path' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/swiftmailer/spool',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'swiftmailer.spool.enabled' => true,
             'swiftmailer.sender_address' => NULL,
             'swiftmailer.single_address' => NULL,
@@ -3683,7 +3828,11 @@ class appDevDebugProjectContainer extends Container
             'assetic.node.paths' => array(
 
             ),
+<<<<<<< HEAD
             'assetic.cache_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/assetic',
+=======
+            'assetic.cache_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/assetic',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'assetic.bundles' => array(
 
             ),
@@ -3695,8 +3844,13 @@ class appDevDebugProjectContainer extends Container
             'assetic.debug' => true,
             'assetic.use_controller' => true,
             'assetic.enable_profiler' => false,
+<<<<<<< HEAD
             'assetic.read_from' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/../web',
             'assetic.write_to' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/../web',
+=======
+            'assetic.read_from' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/../web',
+            'assetic.write_to' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/../web',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'assetic.variables' => array(
 
             ),
@@ -3769,7 +3923,11 @@ class appDevDebugProjectContainer extends Container
             'doctrine.orm.naming_strategy.default.class' => 'Doctrine\\ORM\\Mapping\\DefaultNamingStrategy',
             'doctrine.orm.naming_strategy.underscore.class' => 'Doctrine\\ORM\\Mapping\\UnderscoreNamingStrategy',
             'doctrine.orm.auto_generate_proxy_classes' => true,
+<<<<<<< HEAD
             'doctrine.orm.proxy_dir' => 'C:/Users/fernanda/Documents/GitHub/pagina/app/cache/dev/doctrine/orm/Proxies',
+=======
+            'doctrine.orm.proxy_dir' => 'C:/Users/paola rico/Documents/GitHub/pagina/app/cache/dev/doctrine/orm/Proxies',
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
             'doctrine.orm.proxy_namespace' => 'Proxies',
             'sensio_framework_extra.view.guesser.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Templating\\TemplateGuesser',
             'sensio_framework_extra.controller.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\ControllerListener',
