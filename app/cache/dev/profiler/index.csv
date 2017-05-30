@@ -216,5 +216,11 @@ dfe511,::1,GET,http://localhost:8000/sass.html,1496169469,
 9b8051,::1,GET,http://localhost:8000/index,1496169395,
 68fdfe,::1,GET,http://localhost:8000/Login,1496169457,
 c3c330,::1,GET,http://localhost:8000/Login,1496170296,
+<<<<<<< HEAD
+b8b9d0,::1,GET,http://localhost:8000/Login,1496170387,
+c0d18c,::1,GET,http://localhost:8000/index,1496170394,
+007a74,::1,GET,http://localhost:8000/index,1496170466,
+=======
+>>>>>>> origin/master
 >>>>>>> origin/master
 >>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
