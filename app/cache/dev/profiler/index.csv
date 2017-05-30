@@ -187,11 +187,24 @@ f657c8,::1,GET,http://localhost/ProyectoIECA/web/app_dev.php/Login,1492723648,
 85adc3,::1,GET,http://localhost/ProyectoIECA/web/app_dev.php/sass.html,1496084361,
 9d11bd,::1,GET,http://localhost/ProyectoIECA/web/app_dev.php/sass.html,1496084361,
 eb0d06,::1,GET,http://localhost:8000/index,1496109877,
+<<<<<<< HEAD
+cedfa6,::1,GET,http://localhost:8000/index,1496110104,
+a93bf6,::1,GET,http://localhost:8000/index,1496168160,
+34d075,::1,GET,http://localhost:8000/index,1496168250,
+99b93b,::1,GET,http://localhost:8000/index,1496168999,
+=======
 1ef2fa,::1,GET,http://localhost:8000/,1496168022,
 b17cb5,::1,GET,http://localhost:8000/index,1496168023,
 6cc0fb,::1,GET,http://localhost:8000/index,1496168110,
+<<<<<<< HEAD
 170e20,::1,GET,http://localhost:8000/index,1496168244,
 66dcb1,::1,GET,http://localhost:8000/Login,1496169456,
 3f5613,::1,GET,http://localhost:8000/sass.html,1496169469,
 dfe511,::1,GET,http://localhost:8000/sass.html,1496169469,
 337037,::1,GET,http://localhost:8000/index,1496169483,
+=======
+>>>>>>> origin/master
+9b8051,::1,GET,http://localhost:8000/index,1496169395,
+68fdfe,::1,GET,http://localhost:8000/Login,1496169457,
+c3c330,::1,GET,http://localhost:8000/Login,1496170296,
+>>>>>>> origin/master
