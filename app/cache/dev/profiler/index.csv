@@ -197,6 +197,15 @@ a93bf6,::1,GET,http://localhost:8000/index,1496168160,
 b17cb5,::1,GET,http://localhost:8000/index,1496168023,
 6cc0fb,::1,GET,http://localhost:8000/index,1496168110,
 <<<<<<< HEAD
+5d7604,::1,GET,http://localhost:8000/index,1496170084,
+9a40b5,::1,GET,http://localhost:8000/index,1496170256,
+6eacef,::1,GET,http://localhost:8000/index,1496170730,
+9f01c5,::1,GET,http://localhost:8000/login,1496170741,
+c3479c,::1,GET,http://localhost:8000/login,1496170741,
+b9ce38,::1,GET,http://localhost:8000/Login,1496170755,
+68d772,::1,GET,http://localhost:8000/Login,1496170797,
+=======
+<<<<<<< HEAD
 170e20,::1,GET,http://localhost:8000/index,1496168244,
 66dcb1,::1,GET,http://localhost:8000/Login,1496169456,
 3f5613,::1,GET,http://localhost:8000/sass.html,1496169469,
@@ -214,9 +223,13 @@ c0d18c,::1,GET,http://localhost:8000/index,1496170394,
 =======
 >>>>>>> origin/master
 >>>>>>> origin/master
+<<<<<<< HEAD
 9bcfaa,::1,GET,http://localhost:8000/index,1496170950,
 782dfb,::1,GET,http://localhost:8000/Login,1496170956,
 ec06f1,::1,GET,http://localhost:8000/index,1496171155,
 9f152b,::1,GET,http://localhost:8000/index,1496171202,
 98a8dc,::1,GET,http://localhost:8000/Login,1496171207,
 8f9b61,::1,GET,http://localhost:8000/Login,1496171218,
+=======
+>>>>>>> eff2d95a35dbf9c418874875aabad2baf17866db
+>>>>>>> origin/master
